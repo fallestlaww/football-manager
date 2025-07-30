@@ -39,6 +39,7 @@ This will start three services:
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:8080
 
+4. If you want to test Postman, please import the file first and then run the collection, then start manipulating the data on the site.
 ### Stopping the Application
 
 To stop the application, press `Ctrl+C` in the terminal where docker-compose is running, or run:
