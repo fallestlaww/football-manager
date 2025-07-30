@@ -1,16 +1,16 @@
 {
   "info": {
-    "_postman_id": "f1b1e1a0-0000-0000-0000-000000000001",
+    "_postman_id": "f1b1e1a0-0000-0000-0000-000000000002",
     "name": "Football Manager API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": "Postman collection for testing football manager API"
+    "description": "Updated Postman collection with unique football teams and players"
   },
   "item": [
     {
       "name": "Teams",
       "item": [
         {
-          "name": "Create FC Barcelona",
+          "name": "Create Bayern Munich",
           "request": {
             "method": "POST",
             "header": [
@@ -18,13 +18,13 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"FC Barcelona\",\n  \"country\": \"Spain\",\n  \"balance\": 100000000,\n  \"commission_rate\": 5\n}"
+              "raw": "{\n  \"name\": \"Bayern Munich\",\n  \"country\": \"Germany\",\n  \"balance\": 150000000,\n  \"commission_rate\": 4.8\n}"
             },
             "url": { "raw": "http://localhost:8080/team/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "create"] }
           }
         },
         {
-          "name": "Create Manchester United",
+          "name": "Create Juventus",
           "request": {
             "method": "POST",
             "header": [
@@ -32,13 +32,13 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Manchester United\",\n  \"country\": \"England\",\n  \"balance\": 95000000,\n  \"commission_rate\": 4.5\n}"
+              "raw": "{\n  \"name\": \"Juventus\",\n  \"country\": \"Italy\",\n  \"balance\": 120000000,\n  \"commission_rate\": 5.2\n}"
             },
             "url": { "raw": "http://localhost:8080/team/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "create"] }
           }
         },
         {
-          "name": "Create Paris Saint-Germain",
+          "name": "Create Ajax Amsterdam",
           "request": {
             "method": "POST",
             "header": [
@@ -46,13 +46,13 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Paris Saint-Germain\",\n  \"country\": \"France\",\n  \"balance\": 120000000,\n  \"commission_rate\": 6\n}"
+              "raw": "{\n  \"name\": \"Ajax Amsterdam\",\n  \"country\": \"Netherlands\",\n  \"balance\": 8000,\n  \"commission_rate\": 3.5\n}"
             },
             "url": { "raw": "http://localhost:8080/team/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "create"] }
           }
         },
         {
-          "name": "Create Real Madrid",
+          "name": "Create Borussia Dortmund",
           "request": {
             "method": "POST",
             "header": [
@@ -60,13 +60,13 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Real Madrid\",\n  \"country\": \"Spain\",\n  \"balance\": 110000000,\n  \"commission_rate\": 5.5\n}"
+              "raw": "{\n  \"name\": \"Borussia Dortmund\",\n  \"country\": \"Germany\",\n  \"balance\": 95000000,\n  \"commission_rate\": 4.0\n}"
             },
             "url": { "raw": "http://localhost:8080/team/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "create"] }
           }
         },
         {
-          "name": "Create Liverpool FC",
+          "name": "Create AS Roma",
           "request": {
             "method": "POST",
             "header": [
@@ -74,7 +74,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Liverpool FC\",\n  \"country\": \"England\",\n  \"balance\": 100000,\n  \"commission_rate\": 4\n}"
+              "raw": "{\n  \"name\": \"AS Roma\",\n  \"country\": \"Italy\",\n  \"balance\": 75000000,\n  \"commission_rate\": 3.8\n}"
             },
             "url": { "raw": "http://localhost:8080/team/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "create"] }
           }
@@ -87,7 +87,7 @@
           }
         },
         {
-          "name": "Update FC Barcelona (change balance)",
+          "name": "Update Bayern Munich (increase balance)",
           "request": {
             "method": "PUT",
             "header": [
@@ -95,30 +95,16 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"FC Barcelona\",\n  \"country\": \"Spain\",\n  \"balance\": 200000000,\n  \"commission_rate\": 5\n}"
+              "raw": "{\n  \"name\": \"Bayern Munich\",\n  \"country\": \"Germany\",\n  \"balance\": 180000000,\n  \"commission_rate\": 4.8\n}"
             },
-            "url": { "raw": "http://localhost:8080/team/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "1"] }
+            "url": { "raw": "http://localhost:8080/team/6", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "6"] }
           }
         },
         {
-          "name": "Update Manchester United (change commission rate)",
-          "request": {
-            "method": "PUT",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Manchester United\",\n  \"country\": \"England\",\n  \"balance\": 95000000,\n  \"commission_rate\": 3.45\n}"
-            },
-            "url": { "raw": "http://localhost:8080/team/2", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "2"] }
-          }
-        },
-        {
-          "name": "Delete Real Madrid",
+          "name": "Delete AS Roma",
           "request": {
             "method": "DELETE",
-            "url": { "raw": "http://localhost:8080/team/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "4"] }
+            "url": { "raw": "http://localhost:8080/team/10", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "10"] }
           }
         }
       ]
@@ -127,7 +113,7 @@
       "name": "Players",
       "item": [
         {
-          "name": "Create Lionel Messi",
+          "name": "Create Victor Osimhen",
           "request": {
             "method": "POST",
             "header": [
@@ -135,13 +121,13 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Lionel\",\n  \"last_name\": \"Messi\",\n  \"age\": 38,\n  \"months_of_experience\": 252,\n  \"team_id\": 1\n}"
+              "raw": "{\n  \"first_name\": \"Victor\",\n  \"last_name\": \"Osimhen\",\n  \"age\": 24,\n  \"months_of_experience\": 96,\n  \"team_id\": 6\n}"
             },
             "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
           }
         },
         {
-          "name": "Create Cristiano Ronaldo",
+          "name": "Create Paulo Dybala",
           "request": {
             "method": "POST",
             "header": [
@@ -149,13 +135,13 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Cristiano\",\n  \"last_name\": \"Ronaldo\",\n  \"age\": 40,\n  \"months_of_experience\": 276,\n  \"team_id\": 2\n}"
+              "raw": "{\n  \"first_name\": \"Paulo\",\n  \"last_name\": \"Dybala\",\n  \"age\": 29,\n  \"months_of_experience\": 180,\n  \"team_id\": 7\n}"
             },
             "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
           }
         },
         {
-          "name": "Create Kylian Mbappe",
+          "name": "Create Dusan Tadic",
           "request": {
             "method": "POST",
             "header": [
@@ -163,13 +149,13 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Kylian\",\n  \"last_name\": \"Mbappe\",\n  \"age\": 26,\n  \"months_of_experience\": 120,\n  \"team_id\": 3\n}"
+              "raw": "{\n  \"first_name\": \"Dusan\",\n  \"last_name\": \"Tadic\",\n  \"age\": 34,\n  \"months_of_experience\": 216,\n  \"team_id\": 8\n}"
             },
             "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
           }
         },
         {
-          "name": "Create Kevin DeBruyne",
+          "name": "Create Jude Bellingham",
           "request": {
             "method": "POST",
             "header": [
@@ -177,13 +163,13 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Kevin\",\n  \"last_name\": \"DeBruyne\",\n  \"age\": 34,\n  \"months_of_experience\": 204,\n  \"team_id\": 2\n}"
+              "raw": "{\n  \"first_name\": \"Jude\",\n  \"last_name\": \"Bellingham\",\n  \"age\": 20,\n  \"months_of_experience\": 60,\n  \"team_id\": 9\n}"
             },
             "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
           }
         },
         {
-          "name": "Create Robert Lewandowski",
+          "name": "Create Tammy Abraham",
           "request": {
             "method": "POST",
             "header": [
@@ -191,63 +177,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Robert\",\n  \"last_name\": \"Lewandowski\",\n  \"age\": 36,\n  \"months_of_experience\": 228,\n  \"team_id\": 1\n}"
-            },
-            "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
-          }
-        },
-        {
-          "name": "Create Mohamed Salah",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Mohamed\",\n  \"last_name\": \"Salah\",\n  \"age\": 33,\n  \"months_of_experience\": 190,\n  \"team_id\": 5\n}"
-            },
-            "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
-          }
-        },
-        {
-          "name": "Create Erling Haaland",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Erling\",\n  \"last_name\": \"Haaland\",\n  \"age\": 25,\n  \"months_of_experience\": 84,\n  \"team_id\": 3\n}"
-            },
-            "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
-          }
-        },
-        {
-          "name": "Create Virgil van Dijk",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Virgil\",\n  \"last_name\": \"Van Dijk\",\n  \"age\": 34,\n  \"months_of_experience\": 192,\n  \"team_id\": 5\n}"
-            },
-            "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
-          }
-        },
-        {
-          "name": "Create Harry Kane",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Harry\",\n  \"last_name\": \"Kane\",\n  \"age\": 31,\n  \"months_of_experience\": 168,\n  \"team_id\": 2\n}"
+              "raw": "{\n  \"first_name\": \"Tammy\",\n  \"last_name\": \"Abraham\",\n  \"age\": 25,\n  \"months_of_experience\": 96,\n  \"team_id\": 9\n}"
             },
             "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
           }
@@ -260,7 +190,7 @@
           }
         },
         {
-          "name": "Update Lionel Messi (change age and experience)",
+          "name": "Update Jude Bellingham (change age and experience)",
           "request": {
             "method": "PUT",
             "header": [
@@ -268,42 +198,28 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Lionel\",\n  \"last_name\": \"Messi\",\n  \"age\": 37,\n  \"months_of_experience\": 240,\n  \"team_id\": 1\n}"
+              "raw": "{\n  \"first_name\": \"Jude\",\n  \"last_name\": \"Bellingham\",\n  \"age\": 21,\n  \"months_of_experience\": 72,\n  \"team_id\": 9\n}"
             },
-            "url": { "raw": "http://localhost:8080/player/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "1"] }
+            "url": { "raw": "http://localhost:8080/player/13", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "13"] }
           }
         },
         {
-          "name": "Update Kevin De Bruyne (change team, age and experience)",
-          "request": {
-            "method": "PUT",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Kevin\",\n  \"last_name\": \"DeBruyne\",\n  \"age\": 32,\n  \"months_of_experience\": 180,\n  \"team_id\": 1\n}"
-            },
-            "url": { "raw": "http://localhost:8080/player/4", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "4"] }
-          }
-        },
-        {
-          "name": "Delete Harry Kane",
+          "name": "Delete Tammy Abraham",
           "request": {
             "method": "DELETE",
-            "url": { "raw": "http://localhost:8080/player/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "9"] }
+            "url": { "raw": "http://localhost:8080/player/14", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "14"] }
           }
         }
       ]
     },
     {
-      "name": "Transfer",
+      "name": "Transfers",
       "item": [
         {
-          "name": "Transfer Holland to Barcelona (example)",
+          "name": "Transfer Bellingham to Barcelona",
           "request": {
             "method": "POST",
-            "url": { "raw": "http://localhost:8080/transfer/1/to/4", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["transfer", "7", "to", "1"] }
+            "url": { "raw": "http://localhost:8080/transfer/13/to/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["transfer", "4", "to", "1"] }
           }
         }
       ]
@@ -312,7 +228,7 @@
       "name": "Error Cases",
       "item": [
         {
-          "name": "Create Player with null body (NullableRequestException)",
+          "name": "Create Team with invalid country name",
           "request": {
             "method": "POST",
             "header": [
@@ -320,103 +236,19 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": ""
-            },
-            "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
-          }
-        },
-        {
-        "name": "Create Luka Modriс in non-existent team(EntityNotFoundException)",
-            "request": {
-              "method": "POST",
-              "header": [
-                { "key": "Content-Type", "value": "application/json" }
-              ],
-              "body": {
-                "mode": "raw",
-                "raw": "{\n  \"first_name\": \"Luka\",\n  \"last_name\": \"Modric\",\n  \"age\": 39,\n  \"months_of_experience\": 250,\n  \"team_id\": 4\n}"
-              },
-              "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
-            }
-          },
-        {
-          "name": "Create Player with too much experience (IllegalArgumentException)",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Test\",\n  \"last_name\": \"Player\",\n  \"age\": 20,\n  \"months_of_experience\": 500,\n  \"team_id\": 1\n}"
-            },
-            "url": { "raw": "http://localhost:8080/player/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "create"] }
-          }
-        },
-        {
-          "name": "Create Team with invalid country (MethodArgumentNotValidException)",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Test Team\",\n  \"country\": \"spain123\",\n  \"balance\": 100000,\n  \"commission_rate\": 5\n}"
+              "raw": "{\n  \"name\": \"Test Team\",\n  \"country\": \"Germany123\",\n  \"balance\": 100000,\n  \"commission_rate\": 5\n}"
             },
             "url": { "raw": "http://localhost:8080/team/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "create"] }
           }
         },
         {
-          "name": "Get non-existent player (EntityNotFoundException)",
-          "request": {
-            "method": "GET",
-            "url": { "raw": "http://localhost:8080/player/9999", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["player", "9999"] }
-          }
-        },
-        {
-          "name": "Transfer to non-existent team (EntityNotFoundException)",
+          "name": "Transfer player to team with insufficient funds",
           "request": {
             "method": "POST",
-            "url": { "raw": "http://localhost:8080/transfer/1/to/9999", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["transfer", "1", "to", "9999"] }
-          }
-        },
-        {
-          "name": "Create Team with existing name (EntityExistsException)",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"FC Barcelona\",\n  \"country\": \"Spain\",\n  \"balance\": 100000000,\n  \"commission_rate\": 5\n}"
-            },
-            "url": { "raw": "http://localhost:8080/team/create", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "create"] }
-          }
-        },
-        {
-          "name": "Update Team to existing name (EntityExistsException)",
-          "request": {
-            "method": "PUT",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Manchester United\",\n  \"country\": \"Spain\",\n  \"balance\": 100000000,\n  \"commission_rate\": 5\n}"
-            },
-            "url": { "raw": "http://localhost:8080/team/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["team", "1"] }
-          }
-        },
-        {
-          "name": "Transfer player to team with low balance (LowBalanceException)",
-          "request": {
-            "method": "POST",
-            "url": { "raw": "http://localhost:8080/transfer/1/to/5", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["transfer", "1", "to", "5"] }
+            "url": { "raw": "http://localhost:8080/transfer/1/to/8", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["transfer", "1", "to", "8"] }
           }
         }
       ]
     }
   ]
-} 
+}
